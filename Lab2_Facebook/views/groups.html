@@ -1,0 +1,29 @@
+<div ng-controller="groupCtrl">
+	<div class="row" style="padding-top: 70px">
+		<div class="col-md-2 col-sm-4"></div>
+		<div class="col-md-6 col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>Groups page</h4>
+				</div>
+				<div class="container">
+					<h3>Create Group</h3>
+					<div>  
+					<input type="text" style="width:150px;" class="form-control" ng-model="grName" placeholder="Group Name" name="create-group">
+					<br>
+					<input type="submit" style="background-color:#5A74A8; text-align:center; border: none; width: 100px;  height: 22px;color:#FFFFFF" ng-click="addGroup(grName);" value = "Create Group"></td>
+				</div>
+				<br>
+				<br>
+				<div class="container">
+					<h3>List of groups</h3	>
+					<ul>
+						<li ng-repeat="g in groups"><a href="#/groups/{{g}}">{{g}}</li>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4"></div>
+	</div>
+</div>

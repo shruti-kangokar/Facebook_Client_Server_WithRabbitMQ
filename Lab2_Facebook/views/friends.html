@@ -1,0 +1,19 @@
+<div ng-controller="friendsCtrl">
+	<div class="row" style="padding-top: 70px">
+		<div class="col-md-2 col-sm-4"></div>
+		<div class="col-md-6 col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>Friends page</h4>
+				</div>
+				<div class="container">
+					<h3>This is friends page of {{name}}</h3>
+					<ul>
+						<li ng-repeat="f in friends"><a href="#/friends/{{f.fname}} {{f.lname}}">{{f.fname }} {{f.lname}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4"></div>
+	</div>
+</div>

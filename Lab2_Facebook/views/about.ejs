@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-cookies.js"></script>
+<script src="angularjs/about.js"></script>
+
+<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Welcome</title>
+</head>
+<body ng-app="about" ng-controller="aboutCtrl">
+
+	<div>
+		<nav class="navbar navbar-fixed-top header"
+			style="background-color: #3A5795; height: 45px">
+			<div class="col-md-12">
+				<div class="navbar-header">
+
+					<a href="#" class="navbar-brand" style="color: #FFFFFF"><b>f</b></a>
+					
+
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse1">
+
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a style="color: #FFFFFF"><%= data.fname %></a></li>
+
+						<li><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
+							<ul class="dropdown-menu">
+								<li><a ng-click="logout();"><span
+										class="badge pull-right"></span>Logout</a></li>
+							</ul></li>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="row" style="padding-top: 70px">
+				<div class="col-md-2 col-sm-4">
+		</div>
+
+				<div class="col-md-6 col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							
+							<h4>My profile</h4>
+						</div>
+						<div class="panel-body">
+							<table class="table">
+							<!--
+							<thead>
+								<tr>
+									<th>Items</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr class="active">
+									<td>You</td>
+									<td>Me</td>
+								</tr>
+							</tbody>
+							-->
+				
+
+							<ul>
+						        
+						        Name:
+						        	<%= data[0].fname %>
+									<%= data[0].lname %>
+						        <br>
+						        Email Id:
+						        	<%= data[0].email %>
+						        <br>
+				                Birthday:
+				                	<%= data[0].birthday %>
+						        <br>	
+						        Gender:
+			                	<%= data[0].gender %>
+					        <br>
+						            </a>
+						      
+						</ul>							
+							
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-2 col-sm-4">							
+						</div>
+					</div>
+
+				</div>
+			</div>
+</body>
+</html>

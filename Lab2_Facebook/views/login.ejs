@@ -1,0 +1,209 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><%= title %></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/login.js"></script>
+
+<style type="text/css">
+.css-form input.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-dirty {
+  background-color: #78FA89;
+}
+</style>
+</head>
+<body ng-app="login" ng-controller="login">
+
+	<div navbar navbar-default
+		navbar-fixed-top" style="background-color: #3A5795; height: 90px">
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h1 style="color:#FFFFFF"><b>facebook</h1>
+				</div>
+
+				<table>
+					<tbody>
+						<tr>
+						<td style="vertical-align:middle; color:#FFFFFF"> Email or Phone </td>
+						<td style="vertical-align:middle; color:#FFFFFF"> Password </td>
+						
+						</tr>
+						<tr>
+						<td> <input type="text" name="username" ng-model="username" style="width: 180px"/> <br> </td>
+						<td> <input type="password" name="password" ng-model="password" style="width: 180px"/> <br> </td>		
+						<td> <input type="submit" style="background-color:#5A74A8; text-align:center; border: none; width: 60px;  height: 22px;color:#FFFFFF" ng-click="submit();" value = "Log In"></td>
+						</tr>
+						<tr>
+							<td style="vertical-align:top"> <h5 style="color:#FFFFFF;"> 
+										<input id="checkbox" type="checkbox" class="LoginFormClass" style="vertical-align:top">Keep
+										me logged in</h5>
+									
+								</div></td>
+							<td style="vertical-align:top"><a style="color:#FFFFFF;"
+								href="/forgot_your_password">Forgot your password?</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+		</nav>
+
+		<div class="row" style ="background-color:#EDF0F5">
+			<div class="col-sm-6">
+				<h2>
+					<p style="padding-left: 25px;font-family:lucida grande; color:#141823">
+						<b>Connect with friends and the <br> world around you on
+						Facebook.</b>
+					</p>
+				</h2>
+
+				<div style="padding-top: 25px ; padding-left: 25px;font-family:lucida grande; color:#141823;height:70px">
+				<p style="padding-left: 25px">
+				<img class="img"
+					src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xap1/t39.2365-6/851565_602269956474188_918638970_n.png"
+					alt="some_img" style="float:left;padding-top:12px">
+				
+				<div>
+					<h3>
+					
+					<span style="padding-left:25px;font-size:85%;font-family:lucida grande; color:#141823;align:center">
+						See photos and updates <small>from friends in News Feed.</small>
+					</span>
+						</h3>
+						</div>
+				</p>
+				</div>
+
+
+				<div style="padding-top: 25px ; padding-left: 25px;font-family:lucida grande; color:#141823;height:70px">
+				<p style="padding-left: 25px">
+				<img class="img"
+					src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xaf1/t39.2365-6/851585_216271631855613_2121533625_n.png"
+					alt="some_img" style="float:left;padding-top:12px">
+				
+				<div>
+					<h3>
+					
+					<span style="padding-left:25px;font-size:85%;font-family:lucida grande; color:#141823;align:center">
+					Share what's new <small>in your life on your Timeline.</small>
+					</span>
+						</h3>
+						</div>
+				</p>
+				</div>
+				
+				<div style="padding-top: 25px ; padding-left: 25px;font-family:lucida grande; color:#141823;height:70px">
+				<p style="padding-left: 25px">
+				<img class="img"
+					src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xap1/t39.2365-6/851558_160351450817973_1678868765_n.png"
+					alt="some_img" style="float:left;padding-top:12px">
+				
+				<div>
+					<h3>
+					
+					<span style="padding-left:25px;font-size:85%;font-family:lucida grande; color:#141823;align:center">
+					Find more  <small>of what you're looking for with Facebook Search.</small>
+					</span>
+						</h3>
+						</div>
+				</p>
+				</div>
+	
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<h2><p  style="font-family:lucida grande;color:#141823"><b>Sign Up</b></p></h2>
+
+					<h4><p  style="font-family:lucida grande;color:#141823">It’s free and always will be.</p></h4>
+					<br>
+
+					<form novalidate class="css-form">
+
+						<div class="input-group" >
+							<input type="text" ng-model="user.fname" class="form-control" placeholder="First Name" style="font-family:lucida grande; width:250px"/>
+							<span > </span> <input type="text" ng-model="user.lname"
+								class="form-control" placeholder="Last Name" style="font-family:lucida grande; width: 250px " />
+						</div>
+						<div class="form-group" style="padding-top: 20px">
+							<input type="email" ng-model="user.email" class="form-control" id="email"
+								placeholder="Email" style="font-family:lucida grande ; width: 500px" >
+						</div>
+						<div class="form-group">
+							<input type="email" ng-model="user.reemail" class="form-control" id="reemail"
+								placeholder="Re-enter email" style="font-family:lucida grande; width: 500px" >
+						</div>
+
+						<div>
+							<input type="password" ng-model="user.password" class="form-control" id="pwd"
+								placeholder="New Password" style="font-family:lucida grande; width: 500px" >
+						</div>
+
+						<div >
+						<div style="font-family:lucida grande ; padding-top: 20px" >Birthday</div>
+						<div>
+						Month:     
+							<select ng-model="monthId" ng-options="item.MonthId as item.MonthName for item in months"></select>
+							Date:     
+								<select ng-model="dateId" ng-options="item.DateId as item.DateName for item in date"></select>
+								Year:     
+									<select ng-model="yearId" ng-options="item.YearName as item.YearName for item in year"></select>
+							</div>
+							</div>
+						<div style="font-family:lucida grande ; padding-top: 20px">
+							<span data-type="radio" data-name="gender"  ><span><input
+									type="radio" ng-model="user.gender" name="sex" value="1" ><label style="padding-left: 10px" >Female</label></span>
+									<span><input type="radio" ng-model="user.gender" name="sex"
+									value="2" style ="padding-left: 20px"><label style="padding-left: 10px">Male</label></span></span>
+						</div>
+
+						
+
+						<p style="font-family:lucida grande ; font-size:11px""  >
+							By clicking Sign Up, you agree to our <a href="/legal/terms">
+							Terms</a> and that you have <br>read our <a href="/about/privacy" >Data
+								Policy</a>, including our <a href="/help/cookies">Cookie Use</a>.
+						</p>
+
+								<div class="clearfix" style="padding-top: 25px">
+								<button  class="btn btn-success" style="padding-left: 100px; padding-right: 100px; float:center" type="submit" ng-click="addUser();" name="websubmit" 
+									>Sign Up</button>	
+
+							</div>
+					</form>
+
+					<div class="col-md-12" style="margin: 10px;">
+					<div class="alert alert-danger" ng-hide="invalid_login">
+						<strong>Incorrect username or password</strong>
+					</div>
+					<div class="alert alert-danger" ng-hide="successful_signin">
+						<strong>Sucessful sign Up. Please use the user name and password to login</strong>
+					</div>
+				</div>
+					
+				</div>
+
+
+			</div>
+		</div>
+	
+</body>
+</html>

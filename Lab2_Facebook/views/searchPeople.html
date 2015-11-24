@@ -1,0 +1,12 @@
+<div ng-controller="searchPeopleCtrl">
+  <div class="row" style="padding-top: 70px">
+    <div class="container">
+      <div ng-repeat="p in people">
+      		{{p.fname}} {{p.lname}}
+	  <button type="button" class="btn btn-primary" ng-click="addAsFriend(p)">Add</button>
+      
+      </div>
+      
+    </div>
+  </div>
+</div>
